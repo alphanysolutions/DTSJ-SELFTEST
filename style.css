@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 90px;
+    text-align: center;
+    max-width: 600px;  
+}
+
+.questionnaire {
+    margin: 0 auto; /* Zentriert das Element horizontal */
+    width: 90%; /* Stellt die Breite des Fragebogens ein */
+    max-width: 600px; /* Maximale Breite, gut für größere Bildschirme */
+    text-align: center; /* Zentriert den Text innerhalb des Fragebogens */
+}
+
+.question {
+    margin-bottom: 20px; /* Fügt etwas Platz zwischen den Fragen hinzu */
+}
+
+select {
+    width: 100%; /* Stellt sicher, dass die Dropdowns die volle Breite nutzen */
+    padding: 10px; /* Fügt etwas Innenabstand hinzu für bessere Klickbarkeit */
+    margin-top: 10px; /* Fügt etwas Platz oberhalb des Dropdowns hinzu */
+}
+
+button {
+    padding: 15px 30px; /* Größere Schaltflächen für einfacheres Klicken */
+    font-size: 16px; /* Größere Schrift für bessere Lesbarkeit */
+}
+
+}
