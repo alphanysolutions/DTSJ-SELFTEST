@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Lukas Ziegler</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+    <title>Digital Hoarder Quiz</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Digital Hoarder Quiz</h1>
+        <p>In diesem Quiz können Sie herausfinden, wie Sie mit Ihren digitalen Daten umgehen und welchem Typ des Digital Hoarders Sie am meisten ähneln.</p>
+        <p>Beantworten Sie einfach die folgenden 9 Fragen und erhalten Sie Ihr Ergebnis.</p>
+        <button id="startQuiz">Jetzt Quiz starten</button>
+    </div>
+
+    <!-- Fragebogen, der zunächst versteckt ist -->
+<div class="questionnaire" id="questionnaire" style="display:none;">
+    <form id="quizForm">
+        <!-- Beispiel für eine Frage -->
+        <div class="question">
+            <p>1. Wie oft speichern Sie digitale Inhalte, die Sie wahrscheinlich nie wieder benötigen werden?</p>
+            <select name="question1">
+                <option value="0">Täglich</option>
+                <option value="1">Wöchentlich</option>
+                <option value="2">Monatlich</option>
+                <option value="3">Selten</option>
+                <option value="4">Nie</option>
+            </select>
+        </div>
+        <div class="question">
+    <p>2. Wie schnell füllen sich Ihre Speichermedien (z.B. Festplatte, Cloud-Speicher) mit neuen Dateien?</p>
+    <select name="question2">
+        <option value="0">Sehr schnell</option>
+        <option value="1">Schnell</option>
+        <option value="2">Mäßig</option>
+        <option value="3">Langsam</option>
+        <option value="4">Sehr langsam</option>
+    </select>
+</div>
+
+<div class="question">
+    <p>3. Wie häufig überprüfen und löschen Sie nicht mehr benötigte digitale Inhalte?</p>
+    <select name="question3">
+        <option value="0">Regelmäßig</option>
+        <option value="1">Gelegentlich</option>
+        <option value="2">Selten</option>
+        <option value="3">Fast nie</option>
+        <option value="4">Nie</option>
+    </select>
+</div>
+
+<div class="question">
+    <p>4. Wie empfinden Sie das Löschen digitaler Inhalte?</p>
+    <select name="question4">
+        <option value="0">Sehr leicht</option>
+        <option value="1">Leicht</option>
+        <option value="2">Neutral</option>
+        <option value="3">Schwierig</option>
+        <option value="4">Sehr schwierig</option>
+    </select>
+</div>
+
+<div class="question">
+    <p>5. Ich behalte digitale Inhalte, weil ich befürchte, sie könnten irgendwann wichtig werden.</p>
+    <select name="question5">
+        <option value="0">Stimme voll zu</option>
+        <option value="1">Stimme zu</option>
+        <option value="2">Neutral</option>
+        <option value="3">Stimme nicht zu</option>
+        <option value="4">Stimme überhaupt nicht zu</option>
+    </select>
+</div>
+
+<div class="question">
+    <p>6. Das Löschen von digitalen Inhalten fühlt sich für mich wie ein Verlust an.</p>
+    <select name="question6">
+        <option value="0">Stimme voll zu</option>
+        <option value="1">Stimme zu</option>
+        <option value="2">Neutral</option>
+        <option value="3">Stimme nicht zu</option>
+        <option value="4">Stimme überhaupt nicht zu</option>
+    </select>
+</div>
+
+<div class="question">
+    <p>7. Hat das digitale Horten Ihrer Meinung nach Auswirkungen auf Ihre Produktivität oder Ihr Wohlbefinden?</p>
+    <select name="question7">
+        <option value="0">Ja, erheblich</option>
+        <option value="1">Ja, etwas</option>
+        <option value="2">Nein, nicht wirklich</option>
+        <option value="3">Überhaupt nicht</option>
+    </select>
+</div>
+
+<div class="question">
+    <p>8. Fühlen Sie sich durch die Menge an digitalen Inhalten, die Sie besitzen, überfordert?</p>
+    <select name="question8">
+        <option value="0">Sehr oft</option>
+        <option value="1">Oft</option>
+        <option value="2">Manchmal</option>
+        <option value="3">Selten</option>
+        <option value="4">Nie</option>
+    </select>
+</div>
+
+<div class="question">
+    <p>9. Beschreiben Sie Ihr Verhalten im Umgang mit digitalen Inhalten.</p>
+    <select name="question9">
+        <option value="0">Systematisch und organisiert</option>
+        <option value="1">Emotional gebunden, schwer loszulassen</option>
+        <option value="2">Desorganisiert, chaotisch</option>
+        <option value="3">Nach Vorgabe oder Anweisung</option>
+    </select>
+</div>
+<button type="submit" id="submitQuiz">Jetzt absenden</button>  </form>
+    <!-- Landingpage für Anxious Hoarder -->
+    <div id="AnxiousHoarder" class="results" style="display:none;">
+        <h1>Sie sind ein Anxious Hoarder</h1>
+        <p>Sie sind vielleicht ein "Anxious Hoarder", wenn Sie digitale Daten aufbewahren, weil Sie Angst haben, sie zu verlieren. Sie haben möglicherweise Schwierigkeiten, alte Erinnerungen oder Informationen loszulassen, auch wenn Sie sie nicht mehr benötigen.
+
+</p>
+    </div>
+
+ 
+    <div id="CompliantHoarder" class="results" style="display:none;">
+        <h1>Sie sind ein Compliant Hoarder</h1>
+        <p>Sie sind vielleicht ein "Compliant Hoarder", wenn Sie digitale Daten aufbewahren, weil Sie sich verpflichtet fühlen, dies zu tun. Sie haben möglicherweise Schwierigkeiten Daten zu löschen, auch wenn Sie keinen Platz oder Bedarf dafür haben.
+
+</p>
+    </div>
+<div id="DisengagedHoarder" class="results" style="display:none;">
+        <h1>Sie sind ein "Disengaged Hoarder"</h1>
+        <p>Sie sind ein uninteressierter Datensammler, wenn Sie digitale Daten aufbewahren, weil Sie sich nicht darum kümmern. Sie sind sich möglicherweise nicht bewusst, wie viel Daten Sie haben, oder Sie kümmern sich nicht darum, sie zu organisieren.
+
+</p>
+    </div>
+<div id="Collector" class="results" style="display:none;">
+        <h1>Sie sind ein "Collector"</h1>
+        <p>Sie sind wahrscheinlich ein "Collector", wenn Sie digitale Daten aufbewahren, weil Sie es genießen. Sie interessieren sich möglicherweise für Technologie, Geschichte oder andere Themen. Sie können auch den Prozess des Organisierens und Sammelns von Daten genießen.
+
+</p>
+    </div>
+  
+<!-- Gemeinsamer Ratgeber-Text -->
+<div class="ratgeber" style="display:none;">
+    <div class="ratgeber">
+    <h2>10 Schritte zum digitalen Aufräumen</h2>
+    
+    <h3>1. Schritt: Vorbereiten</h3>
+    <div class="highlighted-text"><strong>Setzen Sie sich ein Ziel.</strong></div>
+    <p>Was möchten Sie mit dem digitalen Aufräumen erreichen?</p>
+    <div class="highlighted-text"><strong>Machen Sie sich einen Überblick.</strong></div>
+    <p>Überlegen Sie sich, welche digitalen Besitztümer Sie haben.</p>
+    <div class="highlighted-text"><strong>Schaffen Sie sich Zeit und Ruhe.</strong></div>
+    <p>Digitales Aufräumen kann zeitaufwändig sein.</p>
+
+    <h3>2. Schritt: Dateien organisieren</h3>
+    <div class="highlighted-text"><strong>Erstellen Sie ein System.</strong></div>
+    <p>Entscheiden Sie sich für eine Ordnerstruktur.</p>
+    <div class="highlighted-text"><strong>Benennen Sie Ihre Dateien sinnvoll.</strong></div>
+    <p>Verwenden Sie aussagekräftige Dateinamen.</p>
+    <div class="highlighted-text"><strong>Löschen Sie unnötige Dateien.</strong></div>
+    <p>Gehen Sie durch Ihre Dateien und löschen Sie alles, was Sie nicht mehr benötigen.</p>
+
+    <h3>3. Schritt: E-Mails organisieren</h3>
+    <div class="highlighted-text"><strong>Setzen Sie sich ein Limit.</strong></div>
+    <p>Legen Sie fest, wie viele E-Mails Sie in Ihrem Posteingang haben möchten.</p>
+    <div class="highlighted-text"><strong>Erstellen Sie Ordner für Ihre E-Mails.</strong></div>
+    <p>Ordnen Sie Ihre E-Mails nach Thema, Datum oder einem anderen Kriterium.</p>
+    <div class="highlighted-text"><strong>Bereinigen Sie Ihren Posteingang regelmäßig.</strong></div>
+    <p>Löschen Sie unerwünschte E-Mails und archivieren Sie wichtige E-Mails.</p>
+
+    <h3>4. Schritt: Fotos organisieren</h3>
+    <div class="highlighted-text"><strong>Sichern Sie Ihre Fotos.</strong></div>
+    <p>Sie können Ihre Fotos auf einem externen Festplatte, in einer Cloud-Speicherlösung oder in einem Fotoarchivierungsservice sichern.</p>
+    <div class="highlighted-text"><strong>Organisieren Sie Ihre Fotos.</strong></div>
+    <p>Organisieren Sie Ihre Fotos nach Datum, Thema oder einem anderen Kriterium.</p>
+    <div class="highlighted-text"><strong>Löschen Sie unnötige Fotos.</strong></div>
+    <p>Gehen Sie durch Ihre Fotosammlung und löschen Sie Fotos, die Sie nicht mehr benötigen.</p>
+      <h3>5. Schritt: Soziale Medien aufräumen</h3>
+    <div class="highlighted-text"><strong>Überdenken Sie Ihre Social-Media-Aktivitäten.</strong></div>
+    <p>Fragen Sie sich, wie viel Zeit Sie in den sozialen Medien verbringen und ob Sie diese Zeit sinnvoll nutzen.</p>
+    <div class="highlighted-text"><strong>Entfolgen Sie Personen und Seiten, die Sie nicht mehr interessieren.</strong></div>
+<p>Bereinigen Sie Ihre sozialen Netzwerke, um nur noch Inhalte zu sehen, die für Sie relevant sind.</p>
+<div class="highlighted-text"><strong>Deaktivieren Sie Benachrichtigungen.</strong></div>
+<p>So werden Sie nicht unnötig abgelenkt und können sich auf Wichtigeres konzentrieren.</p>
+      <h3>6. Schritt: Apps aufräumen</h3>
+<div class="highlighted-text"><strong>Überprüfen Sie Ihre App-Liste.</strong></div>
+<p>Entfernen Sie Apps, die Sie nicht verwenden.</p>
+<div class="highlighted-text"><strong>Deinstallieren Sie nicht mehr benötigte Apps.</strong></div>
+<p>Befreien Sie Speicherplatz und reduzieren Sie die Komplexität Ihres digitalen Lebens.</p>
+<div class="highlighted-text"><strong>Organisieren Sie Ihre Apps.</strong></div>
+<p>Sie können Ihre Apps nach Thema oder Verwendungszweck gruppieren.</p>
+
+<h3>7. Schritt: Passwörter verwalten</h3>
+<div class="highlighted-text"><strong>Verwenden Sie ein Passwort-Manager-Tool.</strong></div>
+<p>Ein Passwort-Manager-Tool erstellt und speichert sichere Passwörter für Sie.</p>
+<div class="highlighted-text"><strong>Aktualisieren Sie Ihre Passwörter regelmäßig.</strong></div>
+<p>Verwenden Sie starke, einzigartige Passwörter und ändern Sie sie in regelmäßigen Abständen.</p>
+
+<h3>8. Schritt: Automatisierung nutzen</h3>
+<div class="highlighted-text"><strong>Nutzen Sie Tools zur Automatisierung.</strong></div>
+<p>Es gibt zahlreiche Tools, die Ihnen dabei helfen, das digitale Aufräumen zu automatisieren.</p>
+
+<h3>9. Schritt: Regelmäßig aufräumen</h3>
+<p><strong>Machen Sie es zu einer Gewohnheit, regelmäßig aufzuräumen.</strong> So können Sie Ihr digitales Leben dauerhaft ordentlich halten.</p>
+
+<h3>10. Schritt: Belohnung</h3>
+<p><strong>Belohnen Sie sich für Ihre Mühen.</strong> So bleiben Sie motiviert und haben mehr Spaß am digitalen Aufräumen.</p>
+
+    <!-- Weitere Inhalte des Ratgebers -->
+</div>
+</div>
+
+       
+</div>
+
+
+    <script src="quiz.js"></script>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
